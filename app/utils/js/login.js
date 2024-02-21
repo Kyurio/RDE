@@ -22,16 +22,12 @@ const app = Vue.createApp({
 
         Login() {
             try {
-                // Obtener la clave API del almacenamiento local o de donde la tengas
-                const apiKey = 'ñacksonfy'; // Ejemplo: Obtener la clave API del almacenamiento local
-
                 // Agregar la clave API como un encabezado en la solicitud
-                axios.post('http://127.0.0.1:8000/login/', {
+                axios.post('http://127.0.0.1:8000/auth/login', {
                         username: this.requestFormLogin.username,
                         password: this.requestFormLogin.password
                     }).then(response => {
-                        console.log(response.data);
-                        if (response.data == true) {
+                        if (response.data === "true") {
                             location.href = 'index';
                         } else {
                             this.error = 'Usuario o Contraseña incorrectos';

@@ -6,5 +6,27 @@
 
 .sidebar {
     min-height: 100vh !important;
-    max-width: 4.5rem;
+    max-width: 5rem;
+    background-color: $navbar-color !important;
+
+    a {
+        color: #ffff!important;
+    }
+
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff !important;
+    background-color:  #A7CFF2 !important
+
+}
+
+
+.barra {
+    background-color: $navbar-color !important;
+    height: 4rem;
+
+    a {
+        color: #fff !important
+    }
 }

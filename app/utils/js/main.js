@@ -4,6 +4,17 @@ const app = Vue.createApp({
         return {
 
 
+            Areas: [],
+
+            Data: {
+
+                "id": 1,
+                "nombre": "Producto 1",
+                "precio": 10.99,
+                "cantidad": 20
+                
+            },
+
             //sweet alert
             Toast: Swal.mixin({
                 toast: true,
@@ -22,10 +33,6 @@ const app = Vue.createApp({
 
     },
 
-    computed: {
-
-
-    },
 
     mounted() {
 
@@ -34,6 +41,31 @@ const app = Vue.createApp({
 
     methods: {
 
+
+        /**
+         * 
+         * 
+         * FUNCIONES GET
+         * 
+         * 
+         */
+
+        async GetAreas() {
+
+            try {
+                
+                axios.get('http://127.0.0.1:8000/areas/GetAreas/').then(response => {
+                    console.log(response.data);
+                    this.Areas = response.data
+                })
+                    .catch(error => {
+                        console.error('Error al realizar la solicitud:', error);
+                    });
+            } catch (error) {
+                console.error('Error al realizar la solicitud:', error);
+            }
+
+        }
 
     },
 

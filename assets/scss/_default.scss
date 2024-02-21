@@ -8,3 +8,15 @@ body {
     font-family: $font-family !important;
     background-color: $color_principal !important;
 }
+
+.btn {
+
+    background-color: $navbar-color !important;
+    color: #fff !important;
+    border-color: transparent !important;
+    
+}
+
+.fullpantalla {
+    min-width: 50vw !important;
+}

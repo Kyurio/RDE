@@ -1,149 +1,160 @@
 <?php
-  include 'components/inc/header.php';
+include 'components/inc/header.php';
 ?>
 
 <body>
   <main>
 
+    <div id="app">
 
-    <div class="row">
-      <div class="col-md-1">
 
-        <div class="sidebar d-flex flex-column flex-shrink-0 bg-body-tertiary">
-          <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
-            <svg class="bi pe-none" width="40" height="32">
-              <use xlink:href="#bootstrap" />
-            </svg>
-            <span class="visually-hidden">Icon-only</span>
-          </a>
-          <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-            <li class="nav-item">
-              <a href="#" class="nav-link active py-3 border-bottom rounded-0" aria-current="page" title="Home" data-bs-toggle="tooltip" data-bs-placement="right">
-                <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Home">
-                  <use xlink:href="#home" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link py-3 border-bottom rounded-0" title="Dashboard" data-bs-toggle="tooltip" data-bs-placement="right">
-                <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Dashboard">
-                  <use xlink:href="#speedometer2" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link py-3 border-bottom rounded-0" title="Orders" data-bs-toggle="tooltip" data-bs-placement="right">
-                <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Orders">
-                  <use xlink:href="#table" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link py-3 border-bottom rounded-0" title="Products" data-bs-toggle="tooltip" data-bs-placement="right">
-                <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Products">
-                  <use xlink:href="#grid" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link py-3 border-bottom rounded-0" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right">
-                <svg class="bi pe-none" width="24" height="24" role="img" aria-label="Customers">
-                  <use xlink:href="#people-circle" />
-                </svg>
-              </a>
-            </li>
-          </ul>
-          <div class="dropdown border-top">
-            <a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="https://github.com/mdo.png" alt="mdo" width="24" height="24" class="rounded-circle">
-            </a>
-            <ul class="dropdown-menu text-small shadow">
-              <li><a class="dropdown-item" href="#">New project...</a></li>
-              <li><a class="dropdown-item" href="#">Settings</a></li>
-              <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Sign out</a></li>
-            </ul>
-          </div>
+
+      <?php include 'components/navbar/navbar.php' ?>
+
+      <div class="row">
+        <div class="col-md-2">
+
+          <?php include 'components/navbar/sidebar.php' ?>
+
         </div>
+        <div class="col-md-10">
 
-      </div>
-      <div class="col-md-10">
+          <div class="tab-content" id="myTabContent">
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary mt-1">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">... </div>
 
-        <div class="container">
+            <div class="tab-pane fade" id="Eventos-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              <!-- tabla eventos -->
+              <div class="container">
+
+                <!-- contenedor principal de la app -->
+
+                <div class="card mt-5 mx-4 py-4">
+                  <div class="card-body">
+
+                    <h3>Eventos</h3>
+
+                    <div class="py-5 mx-5">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>
+                              <button class="btn btn-sm btn-dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                                <i class="fa-solid fa-plus"></i>
+                              </button>
+                            </td>
+                          </tr>
 
 
-          <!-- contenedor principal de la app -->
-          <section>
-            <div class="card mt-5 mx-4 py-4">
-              <div class="card-body">
+                        </tbody>
+                      </table>
+                    </div>
 
-                <h3>Eventos</h3>
-
-
-                <div class="py-5 mx-5">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  </div>
                 </div>
+                <!-- end contenedor principal -->
 
               </div>
+              <!-- end tabla eventos -->
             </div>
-          </section>
-          <!-- end contenedor principal -->
+
+            <div class="tab-pane fade" id="Estadistcias-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+
+            <div class="tab-pane fade" id="Perfiles-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+
+            <div class="tab-pane fade" id="Configuracion-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+          </div>
+
+          <!-- turnos -->
+          <div class="container">
+            <div class="d-flex">
+              <div class="p-2 flex-grow-1"></div>
+              <div class="p-2">Inicio turno</div>
+              <div class="p-2">Fin turno</div>
+            </div>
+          </div>
+          <!-- end turnos -->
 
         </div>
-
       </div>
+
+
+      <div class="offcanvas fullpantalla offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Asignar de causa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+
+          <div class="container mt-5">
+
+            <div class="mb-3">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Equipo</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <small>{{error}}</small>
+            </div>
+
+            <div class="mb-3">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Equipo</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <small>{{error}}</small>
+            </div>
+
+            <div class="mb-3">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Equipo</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <small>{{error}}</small>
+            </div>
+
+            <div class="mb-3">
+              <div class="form-floating">
+                <textarea class="form-control" id="floatingTextarea2"></textarea>
+                <label for="floatingTextarea2">Causa</label>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="form-floating">
+                <textarea class="form-control" id="floatingTextarea2"></textarea>
+                <label for="floatingTextarea2">Comentario</label>
+              </div>
+            </div>
+
+            <button class="btn btn-sm">Agregar</button>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+
     </div>
 
 

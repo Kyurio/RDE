@@ -1,59 +1,128 @@
-@import url('https://db.onlinewebfonts.com/c/b4ccc98add6cc60de17dbb589dca2164?family=Juventus+Fans+Bold');
-body {
-    font-family: "Juventus Fans bold";
+@font-face {
+    font-family: JuventusFans-Bold;
+    src: url('fonts/juventus_font/JuventusFans-Bold.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.card {
-    height: auto;
-    max-height: 370px;
+@font-face {
+    font-family: open-sans;
+    src: url('fonts/Open_Sans/OpenSans-Medium.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.forms-inputs {
+:root{
+    --a1:rgb(10, 0, 153);
+    --p1:#eaeaeb; 
+    --p2: #a0a0a0;
+}
+
+body{
+    font-family: open-sans;
+    margin: 0%;
+    padding: 0%;
+}
+
+/*parte izquierda*/
+.image{
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+.image::before{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/*parte derecha*/
+.title {
+    width: 100%;
+    display: block;
+    font-family: open-sans;
+    margin-bottom: 1REM;
+    font-size: 2.5rem;
+    color: var(--a1);
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-container{
+    background: var(--p1);
+    display: flex;
+    justify-content: center;
+}
+
+.form-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.form-box .form-input{
     position: relative;
 }
 
-.forms-inputs span {
-    position: absolute;
-    top: -18px;
-    left: 10px;
-    background-color: #fff;
-    padding: 5px 10px;
-    font-size: 15px;
-}
-
-.forms-inputs input {
-    height: 50px;
+.form-box .inputBox input{
     width: 100%;
-    border: 2px solid #eee;
-}
-
-.forms-inputs input:focus {
-    box-shadow: none;
+    height: 40px;
+    margin-bottom: 20px;
+    border:none;
+    border-radius: 5px;
     outline: none;
-    border: 2px solid #000;
+    background: #ffffff;
+    padding-left: 45px;
+    font-family: open-sans;
+    font-size: 1rem;
 }
 
-.success-data {
-    display: flex;
-    flex-direction: column;
+.form-box .inputBox input::placeholder{
+    padding-left: 0px;
+    color: var(--p2);
 }
 
-.bxs-badge-check {
-    font-size: 90px;
+/* Recordar contraseña */
+.form-box .custom-checkbox .custom-control-label.recordar {
+    font-family: open-sans;
+    
 }
 
-@media only screen and (max-width: 768px) {
-    /* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
-    .card {
-        max-height: none;
-        /* Restablecer la altura máxima en pantallas pequeñas */
-    }
-    .forms-inputs span {
-        font-size: 13px;
-        /* Reducir el tamaño del texto flotante en pantallas más pequeñas */
-    }
-    .forms-inputs input {
-        height: 40px;
-        /* Reducir la altura del input en pantallas más pequeñas */
-    }
+/* Checkbox Styles */
+.form-box .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+    background-color: var(--a1);
+    border: 0px;
+    display: inline-block; /* Mostrar en línea */
+    vertical-align: middle; /* Alinear verticalmente */
+    margin-right: 5px; /* Ajustar margen derecho */
+}
+
+/* Botón */
+.form-box button[type="submit"]{
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    height: 50px;
+    border-right: 5px;
+    background-color: var(--a1);
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: 0.5s;
+    margin-top: 1.4rem;
+    margin-left: 25%;
+}
+
+.form-box button[type="submit"]:hover{
+    box-shadow: 0px 9px 10px -2px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 0px 9px 10px -2px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 9px 10px -2px rgba(0,0,0,0.55);
 }
