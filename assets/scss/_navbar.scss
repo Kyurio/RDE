@@ -6,7 +6,8 @@
 
 .sidebar {
     min-height: 100vh !important;
-    max-width: 5rem;
+    width: 200px;
+    height: 100%;
     background-color: $navbar-color !important;
 
     a {
@@ -21,11 +22,10 @@
 
 }
 
-
 .barra {
     background-color: $navbar-color !important;
     height: 4rem;
-
+    width: 100%;
     a {
         color: #fff !important
     }

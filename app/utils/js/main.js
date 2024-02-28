@@ -5,6 +5,7 @@ const app = Vue.createApp({
 
 
             Areas: [],
+            Sistemas: [],
 
             Data: {
 
@@ -12,7 +13,7 @@ const app = Vue.createApp({
                 "nombre": "Producto 1",
                 "precio": 10.99,
                 "cantidad": 20
-                
+
             },
 
             //sweet alert
@@ -36,6 +37,8 @@ const app = Vue.createApp({
 
     mounted() {
 
+        this.GetAreas();
+        this.GetSistema(1);
 
     },
 
@@ -53,19 +56,45 @@ const app = Vue.createApp({
         async GetAreas() {
 
             try {
-                
-                axios.get('http://127.0.0.1:8000/areas/GetAreas/').then(response => {
-                    console.log(response.data);
-                    this.Areas = response.data
-                })
+
+                axios.get('http://127.0.0.1:8000/areas/GetAreas/')
+                    .then(response => {
+                        this.Areas = response.data;
+                    })
                     .catch(error => {
-                        console.error('Error al realizar la solicitud:', error);
+                        // Manejar cualquier error que ocurra durante la llamada
+                        console.error('Error al obtener las áreas:', error);
                     });
+
+
             } catch (error) {
                 console.error('Error al realizar la solicitud:', error);
             }
 
-        }
+        },
+
+        async GetSistema(id) {
+
+            try {
+
+                axios.get('http://127.0.0.1:8000/areas/GetSistemas/')
+                    .then(response => {
+                        this.Areas = response.data;
+                    })
+                    .catch(error => {
+                        // Manejar cualquier error que ocurra durante la llamada
+                        console.error('Error al obtener las áreas:', error);
+                    });
+
+
+            } catch (error) {
+                console.error('Error al realizar la solicitud:', error);
+            }
+
+        },
+
+
+
 
     },
 
